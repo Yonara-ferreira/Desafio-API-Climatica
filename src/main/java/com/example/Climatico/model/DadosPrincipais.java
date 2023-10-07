@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
 public class DadosPrincipais {
@@ -19,7 +21,15 @@ public class DadosPrincipais {
     private DadosClimaticoVento dadosClimaticoVento;
     private DadosChuva dadosChuva;
     private DadosNuvens dadosNuvens;
-
+    private List<DescricaoClima> descricaoClima;
+    @JsonAlias("visibility")
+    private int visibilidade;
+    @JsonAlias("dt")
+    private long dt;
+    @JsonAlias("dt_iso")
+    private String dt_iso;
+    @JsonAlias("timezone")
+    private int fusoHorario;
 
 
 }
