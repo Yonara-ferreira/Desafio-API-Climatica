@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor
-public class DadosClimaticosPrincipais {
+public class DadosClimaticos {
     @JsonAlias("temp")
     private double temperatura;
     @JsonAlias("temp_min")
