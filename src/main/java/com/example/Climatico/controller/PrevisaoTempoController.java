@@ -1,6 +1,6 @@
 package com.example.Climatico.controller;
 
-import com.example.Climatico.model.DadosPrincipais;
+import com.example.Climatico.model.DadosPrevisaoDoTempo;
 import com.example.Climatico.service.PrevisaoTempoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +16,7 @@ public class PrevisaoTempoController {
     private PrevisaoTempoService service;
 
     @GetMapping("/{cidade}")
-    public DadosPrincipais obterPrevisaoTempoAtual(@PathVariable String cidade) {
+    public DadosPrevisaoDoTempo obterPrevisaoTempoAtual(@PathVariable String cidade) {
         return service.previsaoDoTempo(cidade);
     }
 
